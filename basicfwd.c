@@ -163,7 +163,7 @@ void print_info(int pkt_len, uint8_t *info, FILE *fout)
         }
         return;
     }
-    if(pkt_len <= ETH_LEN)
+    if(pkt_len < ETH_LEN)
     {
         fprintf(fout, "\nError in packet, data is too small");
         return;
@@ -246,7 +246,7 @@ void print_info(int pkt_len, uint8_t *info, FILE *fout)
             fprintf(fout, "\nError in packet, data is too small");
             return;
         }
-        unsigned int tcp_header_len = (info[ETH_LEN + ip_header_length + 12] >> 4) * 5;
+        unsigned int tcp_header_len = (info[ETH_LEN + ip_header_length + 12] >> 4) * 4;
         if(pkt_len < ETH_LEN + ip_header_length + tcp_header_len)
         {
             fprintf(fout, "\nError in packet, data is too small");

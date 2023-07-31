@@ -38,8 +38,20 @@ Header Length: 20
 Source Address: 192.0.2.10
 Destination Address: 198.51.100.20
 Header Checksum: 4E 70
-Protocol: 06
-Error in packet, data is too small
+Protocol: 06(TCP)
+
+TCP: C3 50 00 50 00 00 03 E8 00 00 00 00 80 02 FA F0 C1 46 00 00 02 04 05 B4 01 03 03 07 04 02 00 00
+Source port: 50000
+Destination port: 80
+Sequence number: 00 00 03 E8
+Acknowledgment number: 00 00 00 00
+TCP header length: 32
+Params: 02
+Window size: -100663296
+Checksum: C1 46
+Urgent pointer: 00 00
+
+Data: 
 ----------------------------------------------------------------------------------------------------
 ID:3
 Size of packet:91 bytes
@@ -57,18 +69,18 @@ Destination Address: 198.51.100.20
 Header Checksum: 4E 56
 Protocol: 06(TCP)
 
-TCP: C3 50 00 50 00 00 03 E9 00 00 07 D1 50 18 FF FF AB 55 00 00 47 45 54 20 2F
+TCP: C3 50 00 50 00 00 03 E9 00 00 07 D1 50 18 FF FF AB 55 00 00
 Source port: 50000
 Destination port: 80
 Sequence number: 00 00 03 E9
 Acknowledgment number: 00 00 07 D1
-TCP header length: 25
+TCP header length: 20
 Params: 18
 Window size: 32640
 Checksum: AB 55
 Urgent pointer: 00 00
 
-Data:  20 48 54 54 50 2F 31 2E 31 0D 0A 48 6F 73 74 3A 20 65 78 61 6D 70 6C 65 2E 63 6F 6D 0D 0A 0D 0A
+Data:  47 45 54 20 2F 20 48 54 54 50 2F 31 2E 31 0D 0A 48 6F 73 74 3A 20 65 78 61 6D 70 6C 65 2E 63 6F 6D 0D 0A 0D 0A
 ----------------------------------------------------------------------------------------------------
 ID:4
 Size of packet:85 bytes
@@ -86,18 +98,18 @@ Destination Address: 198.51.100.20
 Header Checksum: 4E 5B
 Protocol: 06(TCP)
 
-TCP: 00 50 C3 50 00 00 07 D1 00 00 04 10 80 18 72 10 78 32 00 00 02 04 05 B4 01 03 03 07 04 02 00 00 48 54 54 50 2F 31 2E 31
+TCP: 00 50 C3 50 00 00 07 D1 00 00 04 10 80 18 72 10 78 32 00 00 02 04 05 B4 01 03 03 07 04 02 00 00
 Source port: 80
 Destination port: 50000
 Sequence number: 00 00 07 D1
 Acknowledgment number: 00 00 04 10
-TCP header length: 40
+TCP header length: 32
 Params: 18
 Window size: 1912602624
 Checksum: 78 32
 Urgent pointer: 00 00
 
-Data:  20 32 30 30 20 4F 4B 0D 0A 0D 0A
+Data:  48 54 54 50 2F 31 2E 31 20 32 30 30 20 4F 4B 0D 0A 0D 0A
 ----------------------------------------------------------------------------------------------------
 ID:5
 Size of packet:58 bytes
