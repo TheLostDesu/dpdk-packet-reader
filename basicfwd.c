@@ -226,9 +226,9 @@ void print_info(int pkt_len, uint8_t *info, FILE *fout)
             fprintf(fout, " %02X", info[j]);
         }
 
-        fprintf(fout, "\nSource port: %d", (info[ETH_LEN + ip_header_length] << 8) + info[ETH_LEN + ip_header_length + 1]);
-        fprintf(fout, "\nDestination port: %d", (info[ETH_LEN + ip_header_length + 2] << 8) + info[ETH_LEN + ip_header_length + 3]);
-        fprintf(fout, "\nLength: %d", (info[ETH_LEN + ip_header_length + 4] << 8) + info[ETH_LEN + ip_header_length + 5]);
+        fprintf(fout, "\nSource port: %d", ((int)(info[ETH_LEN + ip_header_length]) << 8) + info[ETH_LEN + ip_header_length + 1]);
+        fprintf(fout, "\nDestination port: %d", ((int)(info[ETH_LEN + ip_header_length + 2]) << 8) + info[ETH_LEN + ip_header_length + 3]);
+        fprintf(fout, "\nLength: %d", ((int)(info[ETH_LEN + ip_header_length + 4]) << 8) + info[ETH_LEN + ip_header_length + 5]);
         fprintf(fout, "\nChecksum: %02X %02X", info[ETH_LEN + ip_header_length + 6], info[ETH_LEN + ip_header_length + 7]);
 
         fprintf(fout, "\n\nData: ");    
@@ -260,8 +260,8 @@ void print_info(int pkt_len, uint8_t *info, FILE *fout)
             fprintf(fout, " %02X", info[j]);
         }
         
-        fprintf(fout, "\nSource port: %d", (info[ETH_LEN + ip_header_length] << 8) + info[ETH_LEN + ip_header_length + 1]);
-        fprintf(fout, "\nDestination port: %d", (info[ETH_LEN + ip_header_length + 2] << 8) + info[ETH_LEN + ip_header_length + 3]);
+        fprintf(fout, "\nSource port: %d", ((int)(info[ETH_LEN + ip_header_length]) << 8) + info[ETH_LEN + ip_header_length + 1]);
+        fprintf(fout, "\nDestination port: %d", ((int)(info[ETH_LEN + ip_header_length + 2]) << 8) + info[ETH_LEN + ip_header_length + 3]);
 
         fprintf(fout, "\nSequence number:");
         for(int j = ETH_LEN + ip_header_length + 4; j < ETH_LEN + ip_header_length + 8; ++j)
@@ -279,7 +279,7 @@ void print_info(int pkt_len, uint8_t *info, FILE *fout)
         fprintf(fout, "\nParams: %02X", info[ETH_LEN + ip_header_length + 13]);
 
 
-        fprintf(fout, "\nWindow size: %d", info[ETH_LEN + ip_header_length + 14] << 8 + info[ETH_LEN + ip_header_length + 15]);
+        fprintf(fout, "\nWindow size: %d", ((int)(info[ETH_LEN + ip_header_length + 14]) << 8) + info[ETH_LEN + ip_header_length + 15]);
         fprintf(fout, "\nChecksum:");
         for(int j = ETH_LEN + ip_header_length + 16; j < ETH_LEN + ip_header_length + 18; ++j)
         {

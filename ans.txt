@@ -47,7 +47,7 @@ Sequence number: 00 00 03 E8
 Acknowledgment number: 00 00 00 00
 TCP header length: 32
 Params: 02
-Window size: -100663296
+Window size: 64240
 Checksum: C1 46
 Urgent pointer: 00 00
 
@@ -76,7 +76,7 @@ Sequence number: 00 00 03 E9
 Acknowledgment number: 00 00 07 D1
 TCP header length: 20
 Params: 18
-Window size: 32640
+Window size: 65535
 Checksum: AB 55
 Urgent pointer: 00 00
 
@@ -105,7 +105,7 @@ Sequence number: 00 00 07 D1
 Acknowledgment number: 00 00 04 10
 TCP header length: 32
 Params: 18
-Window size: 1912602624
+Window size: 29200
 Checksum: 78 32
 Urgent pointer: 00 00
 
